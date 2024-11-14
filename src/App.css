@@ -1,38 +1,131 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main App Container */
 .App {
   text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header and Timer */
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Quiz Question Styling */
+.quiz h2 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.options {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Option Buttons */
+button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Correct Answer Highlight */
+.quiz p {
+  font-size: 1rem;
+  color: #0c9c0c;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Results Container */
+.results {
+  margin-top: 1.5rem;
+}
+
+.results h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.results li {
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #555;
+}
+
+.results h3 {
+  font-size: 1.3rem;
+  color: #0c9c0c;
+  font-weight: bold;
+}
+
+/* Submit Nickname Input */
+input[type="text"] {
+  padding: 0.8rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0c9c0c;
+  box-shadow: 0 0 4px rgba(12, 156, 12, 0.2);
 }
